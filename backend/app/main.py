@@ -39,9 +39,11 @@ app = FastAPI(title="CareCircle AI API", version="1.0.0")
 # Allow requests from the local React development server
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
-    allow_credentials=False,
-    allow_methods=["GET", "POST"],
+    allow_origins=[
+        "https://care-circle-ai-279j.onrender.com"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
